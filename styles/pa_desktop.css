@@ -1,0 +1,26 @@
+#bandeau_haut{
+    border: thick magenta solid;
+    display: flex;
+    align-items: center;
+
+}
+
+h1{
+    border: thick green solid;
+    text-align: left;
+    flex-grow: 1;
+}
+
+#logo{
+    border: thick red solid;
+    text-align: right;
+    flex-grow: 1;
+}
+
+section{
+    border: thick black solid;
+}
+
+#annonce{
+    border: thick blue solid;
+}
