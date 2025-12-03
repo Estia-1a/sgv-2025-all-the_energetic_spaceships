@@ -19,8 +19,15 @@ h1{
 
 section{
     border: thick black solid;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 #annonce{
     border: thick blue solid;
+    border-radius: 1em;
+
+    min-width: 40%;
+    width: 40%;
 }
