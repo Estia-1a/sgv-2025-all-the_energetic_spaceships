@@ -9,34 +9,38 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Location etudiant</h1>
+    <div id="titre">
+        <h1>Location etudiant</h1>
+    </div>
 
     <!-- Section filtres -->
     <section>
-        <h2>Filtres</h2>
-        <form>
-            <label for="destination">Destination :</label>
-            <input type="text" id="destination" name="destination"><br><br>
+        <div id="filtres">
+            <h2>Filtres</h2>
+            <form>
+                <label for="destination">Destination :</label>
+                <input type="text" id="destination" name="destination"><br><br>
 
-            <label for="date-arrivee">Date d'arrivée :</label>
-            <input type="date" id="date-arrivee" name="date-arrivee"><br><br>
+                <label for="date-arrivee">Date d'arrivée :</label>
+                <input type="date" id="date-arrivee" name="date-arrivee"><br><br>
 
-            <label for="date-depart">Date de départ :</label>
-            <input type="date" id="date-depart" name="date-depart"><br><br>
+                <label for="date-depart">Date de départ :</label>
+                <input type="date" id="date-depart" name="date-depart"><br><br>
 
-            <label for="type-logement">Type de logement :</label>
-            <select id="type-logement" name="type-logement">
-                <option value="">--Choisir--</option>
-                <option value="appartement">Appartement</option>
-                <option value="maison">Maison</option>
-                <option value="villa">Villa</option>
-            </select><br><br>
+                <label for="type-logement">Type de logement :</label>
+                <select id="type-logement" name="type-logement">
+                    <option value="">--Choisir--</option>
+                    <option value="appartement">Appartement</option>
+                    <option value="maison">Maison</option>
+                    <option value="villa">Villa</option>
+                </select><br><br>
 
-            <label for="prix-max">Prix max (€) :</label>
-            <input type="number" id="prix-max" name="prix-max"><br><br>
+                <label for="prix-max">Prix max (€) :</label>
+                <input type="number" id="prix-max" name="prix-max"><br><br>
 
-            <button type="submit">Filtrer</button>
-        </form>
+                <button type="submit">Filtrer</button>
+            </form>
+        </div>
     </section>
 
     <!-- Section annonces -->
