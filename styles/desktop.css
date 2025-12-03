@@ -1,46 +1,112 @@
-#bandeau_haut{
-    border: thick magenta;
+/* --- Variables et Styles de Base (Inspiré Airbnb) --- */
+:root {
+    --couleur-primaire: #FF385C; 
+    --couleur-texte: #222222;
+    --couleur-arriere-plan: #FFFFFF;
+    --couleur-gris-clair: #ebebeb; 
+    --radius-moyen: 8px; 
+}
+
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    color: var(--couleur-texte);
+    background-color: var(--couleur-arriere-plan);
+}
+
+/* 1. BANDEAU DE NAVIGATION (Header) */
+#bandeau_haut {
     display: flex;
     align-items: center;
-
+    padding: 10px 40px; 
+    border-bottom: 1px solid var(--couleur-gris-clair); 
+    background-color: var(--couleur-arriere-plan);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
 }
     
-h1{
-    border: thick green;
+h1 {
+    font-size: 1.5em;
+    font-weight: 800; 
+    color: var(--couleur-primaire); 
     text-align: left;
-    flex-grow: 1;
-}
-#logo{
-    border: thick red;
-    text-align: right;
-    flex-grow: 1;
-    .full{
-    width:15%;
-    height: auto;
-}
+    flex-grow: 1; 
+    margin: 0; 
 }
 
-section {
-    border: thick black;
+#logo {
     display: flex;
+    /* Aligne les éléments (boutons, avatar, etc.) à droite */
+    justify-content: flex-end; 
     align-items: center;
+    flex-grow: 1; 
+    /* Ajout d'un petit écart entre les éléments de la barre de navigation */
+    gap: 15px; 
+}
+
+#logo .full {
+    width: 15%; 
+    height: auto;
+    min-width: 40px; 
+    border-radius: 50%; 
+}
+
+/* 2. SECTION PRINCIPALE (Contenu et Filtres) */
+section {
+    display: flex;
+    padding: 20px 40px;
+    gap: 30px; 
+    align-items: flex-start; 
 }
 
 #filtres {
-    border: thick black;
-    width: 350px;   
-    height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) solid; /* Ombre douce */
-
+    width: 350px; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); 
+    padding: 20px;
+    border-radius: var(--radius-moyen); 
+    background-color: var(--couleur-arriere-plan);
+    position: sticky; 
+    top: 20px;
+    border: 1px solid var(--couleur-gris-clair); 
 }
 
-
-
-
+/* 3. ZONE D'AFFICHAGE PRINCIPALE (Images/Résultats) */
 #image {
-    border : thick red;
-    .full {
-    width: 95%;
-    height: auto;
+    flex-grow: 1; 
 }
+
+#image .full {
+    width: 100%; 
+    height: auto;
+    border-radius: var(--radius-moyen); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+#image .full:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+}
+
+/* 4. LE BOUTON FAÇON AIRBNB */
+.btn-primaire {
+    background-color: var(--couleur-primaire); 
+    color: var(--couleur-arriere-plan); 
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600; 
+    /* La forme pilule est la clé du style Airbnb pour les boutons principaux */
+    border-radius: 100px; 
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primaire:hover {
+    background-color: #E00040; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primaire:active {
+    transform: scale(0.98);
 }
