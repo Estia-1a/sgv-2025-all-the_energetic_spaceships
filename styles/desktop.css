@@ -4,8 +4,14 @@
 
 section {
     border: thick black solid;
+    display: flex;
+    align-items: center;
 }
 
 #filtres {
     border: thick green solid;
+}
+
+#image{
+    border : thick red solid;
 }
